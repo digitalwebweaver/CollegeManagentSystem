@@ -10,7 +10,11 @@ namespace CollageManagementSystem.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+
+            ViewBag.CollegeName = "Super Admin";
+            ViewBag.Title = "GPNC Supper Account";
+            return RedirectToAction("Login", "Account");
+            //return View();
         }
 
         public ActionResult About()
@@ -26,5 +30,11 @@ namespace CollageManagementSystem.Controllers
 
             return View();
         }
+
+        public ActionResult Routing() // Routing
+        {
+            return View();
+        }
+
     }
 }

@@ -1,63 +1,204 @@
 ﻿@using CollageManagementSystem.Models
 @model LoginViewModel
 @{
-    ViewBag.Title = "Log in";
+    Layout = null;
 }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Nursing College | Log in</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="~/Login/backend/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Login/backend/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="~/Login/backend/css/ionicons.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="~/Login/backend/css/select2.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Login/backend/css/AdminLTE.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <style>
+        @@media (min-width: 1200px) .container {
+            width:1170px;
+        }
 
-<h2>@ViewBag.Title.</h2>
-<div class="row">
-    <div class="col-md-8">
-        <section id="loginForm">
+        @@media (min-width: 992px) .container {
+            width: 970px;
+        }
+
+        @@media (min-width: 768px) .container {
+            width: 750px;
+        }
+
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body class="hold-transition login-page" style="background: url(/Login/backend/img/flour.png) no-repeat bottom center/cover; background-color: #eee !important;">
+    <br><br><br><br>
+    <div class="login-logo">
+        <img src="/Login/backend/img/s_logo.png" width="180px" height="60px" alt="User Avatar">
+    </div>
+    <section class="container">
+        <div class="row">
             @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
-                @Html.AntiForgeryToken()
-                <h4>Use a local account to log in.</h4>
-                <hr />
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <div class="checkbox">
-                            @Html.CheckBoxFor(m => m.RememberMe)
-                            @Html.LabelFor(m => m.RememberMe)
+            @Html.AntiForgeryToken()
+
+            <!-- left column -->
+                <div class="col-md-4" style="padding-top: 30px;">
+                    <!-- general form elements -->
+                    <div class="">
+                        <div class="">
+                            <!-- <div class="login-logo">
+                              <a href="backend/index2.html"><b>Admin</b>LTE</a>
+                            </div> -->
+                            <!-- /.login-logo -->
+                            <div class="login-box-body">
+                                <div class="box-widget widget-user-2">
+                                    <!-- Add the bg color to the header using any of the bg-* classes -->
+                                    <div class="widget-user-header bg-yellow">
+                                        <div class="widget-user-image">
+                                            <img class="img-circle" src="/assets/logo.jpeg" alt="User Avatar">
+                                        </div>
+                                        <!-- /.widget-user-image -->
+                                        <h3 class="widget-user-username">Gauteng Nursing Management System</h3>
+                                        <h5 class="widget-user-desc">&nbsp;</h5>
+                                    </div>
+                                    <br><br>
+                                    <div class="no-padding">
+                                        <h3>Contact customer support</h3>
+                                        <h4><img class="img-circle" src="/Login/backend/img/checked.png" width="16px" height="16px" alt="User Avatar">User and Student profile management</h4>
+                                        <h4><img class="img-circle" src="/Login/backend/img/checked.png" width="16px" height="16px" alt="User Avatar"> Internal and External Comminication</h4>
+                                        <h4><img class="img-circle" src="/Login/backend/img/checked.png" width="16px" height="16px" alt="User Avatar"> Exam management</h4>
+                                        <h4><img class="img-circle" src="/Login/backend/img/checked.png" width="16px" height="16px" alt="User Avatar"> Financial, Attendance and Academic Management and reporting plus many more...</h4>
+                                        <!-- /.row -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.login-box-body -->
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Log in" class="btn btn-default" />
+            <!--/.col (left) -->
+            <!-- right column -->
+                <div class="col-md-4" style="padding-top: 30px;">
+                    <div class="" style="-webkit-box-shadow: -3px 4px 23px 1px rgba(102,102,102,0.95);
+            -moz-box-shadow: -3px 4px 23px 1px rgba(102,102,102,0.95);
+             box-shadow: -3px 4px 23px 1px rgba(102,102,102,0.95);">
+                        <div class="login-box-body">
+                            <div class="box box-widget widget-user">
+                                <!-- Add the bg color to the header using any of the bg-* classes -->
+                                <div class="widget-user-header bg-aqua-active">
+                                    <h3 class="widget-user-username"><center>Login</center></h3>
+                                    <h5 class="widget-user-desc"></h5>
+                                </div>
+                                <div class="widget-user-image">
+                                    <img class="img-circle" src="/assets/logo.jpeg" alt="User Avatar">
+                                </div><br><br><br>
+                                <div class="box-footer no-padding">
+                                    <form action="backend/index2.html" method="post">
+                                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                        <div class="form-group has-feedback">
+                                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Username" })
+                                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                                        </div>
+                                        <div class="form-group has-feedback">
+                                            @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
+                                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-8">
+                                                <div class="checkbox icheck">
+                                                    <label>
+                                                        <input type="checkbox"> Remember Me
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <!-- /.col -->
+                                            <div class="col-xs-4">
+                                                <button type="submit" class="btn btn-primary btn-block btn-flat" style="background-color: #337ab7;border-color: #337ab7;">Sign In</button>
+                                            </div>
+                                            <!-- /.col -->
+                                        </div>
+                                    </form>
+                                    <!-- /.row -->
+                                </div>
+                            </div>
+                            <!-- /.social-auth-links -->
+                            <p>
+                                @Html.ActionLink("I forgot my password", "ForgotPassword")
+                            </p>
+                        </div>
+                        <!-- /.login-box-body -->
                     </div>
                 </div>
-                <p>
-                    @Html.ActionLink("Register as a new user", "Register")
-                </p>
-                @* Enable this once you have account confirmation enabled for password reset functionality
-                    <p>
-                        @Html.ActionLink("Forgot your password?", "ForgotPassword")
-                    </p>*@
+                <div class="col-md-4" style="padding-top: 30px;">
+                    <div class="">
+                        <div class="login-box-body">
+                            <div class="box-widget widget-user-2">
+                                <!-- Add the bg color to the header using any of the bg-* classes -->
+                                <div class="widget-user-header" style="background: #eee;">
+                                    <div class="widget-user-image">
+                                        <img class="img-circle" src="/Login/backend/img/mobile.png" alt="User Avatar">
+                                    </div>
+                                    <!-- /.widget-user-image -->
+                                    <h3 class="widget-user-username">Customer Support</h3>
+                                    <h5 class="widget-user-desc">&nbsp;</h5>
+                                </div>
+                                <br><br>
+                                <div class=" no-padding">
+                                    <h3>Contact Customer Support</h3>
+                                    <h4><img class="img-circle" src="/Login/backend/img/checked.png" width="16px" height="16px" alt="User Avatar"> Dear user,</h4>
+                                    <h4><img class="img-circle" src="/Login/backend/img/checked.png" width="16px" height="16px" alt="User Avatar"> Please email to gpnc@gauteng.gov.za in case,</h4>
+                                    <h4><img class="img-circle" src="/Login/backend/img/checked.png" width="16px" height="16px" alt="User Avatar"> if you need help with login. Please email with your name, email ID, Phone number, Student Number and College name.</h4>
+                                    <h4><img class="img-circle" src="/Login/backend/img/checked.png" width="16px" height="16px" alt="User Avatar"> Tel No: 086 001 1000</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.login-box-body -->
+                    </div>
+                </div>
+            <!--/.col (right) -->
             }
-        </section>
-    </div>
-    <div class="col-md-4">
-        <section id="socialLoginForm">
-            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
-        </section>
-    </div>
-</div>
+        </div>
+        <!-- /.row -->
+    </section>
+    <br><br><br><br><br><br>
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+    <!-- /.login-box -->
+    <!-- jQuery 3 -->
+    <script src="~/Login/backend/js/jquery.min.js"></script>
+    <!-- Select2 -->
+    <!-- Bootstrap 3.3.7 -->
+    <!-- iCheck -->
+    <script src="~/Login/backend/js/icheck.min.js"></script>
+    <script>
+        $(function () {
+            //Initialize Select2 Elements
+            $('.select2').select2()
+        })
+    </script>
+    <script>
+        $(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-blue',
+                radioClass: 'iradio_square-blue',
+                increaseArea: '20%' /* optional */
+            });
+        });
+    </script>
+</body>
+</html>

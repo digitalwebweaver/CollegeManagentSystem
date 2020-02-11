@@ -1,31 +1,1166 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ANN LATSKY NURSING COLLEGE</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta name="theme-color" content="#424242" />
+    <link href="Content/backend/images/s-favican.png" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="Content/backend/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Content/backend/dist/css/style-main.css">
+    <link rel="stylesheet" href="Content/backend/dist/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="Content/backend/dist/themes/red/skins/skin-red.css">
+    <link rel="stylesheet" href="Content/backend/dist/themes/red/ss-main-red.css">
+    <link rel="stylesheet" href="Content/backend/dist/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Content/backend/dist/css/ionicons.min.css">
+    <link rel="stylesheet" href="Content/backend/plugins/iCheck/flat/blue.css">
+    <link rel="stylesheet" href="Content/backend/plugins/morris/morris.css">
+    <link rel="stylesheet" href="Content/backend/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="Content/backend/plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="Content/backend/plugins/colorpicker/bootstrap-colorpicker.css">
+    <link rel="stylesheet" href="Content/backend/plugins/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="Content/backend/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="Content/backend/dist/css/custom_style.css">
+    <link rel="stylesheet" href="Content/backend/datepicker/css/bootstrap-datetimepicker.css">
+    <!--file dropify-->
+    <link rel="stylesheet" href="Content/backend/dist/css/dropify.min.css">
+    <!--file nprogress-->
+    <link href="Content/backend/dist/css/nprogress.css" rel="stylesheet">
+    <!--print table-->
+    <link href="Content/backend/dist/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="Content/backend/dist/datatables/css/buttons.dataTables.min.css" rel="stylesheet">
+    <link href="Content/backend/dist/datatables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <!--print table mobile support-->
+    <link href="Content/backend/dist/datatables/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="Content/backend/dist/datatables/css/rowReorder.dataTables.min.css" rel="stylesheet">
+    <script src="Content/backend/custom/jquery.min.js"></script>
+    <script src="Content/backend/dist/js/moment.min.js"></script>
+    <script src="Content/backend/datepicker/js/bootstrap-datetimepicker.js"></script>
+    <script src="Content/backend/plugins/colorpicker/bootstrap-colorpicker.js"></script>
+    <script src="Content/backend/datepicker/date.js"></script>
+    <script src="Content/backend/dist/js/jquery-ui.min.js"></script>
+    <script src="Content/backend/js/school-custom.js"></script>
+    <script src="Content/backend/js/sstoast.js"></script>
+    <!-- fullCalendar -->
+    <link rel="stylesheet" href="Content/backend/fullcalendar/dist/fullcalendar.min.css">
+    <link rel="stylesheet" href="Content/backend/fullcalendar/dist/fullcalendar.print.min.css" media="print">
+</head>
+<body class="hold-transition skin-blue fixed sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header" id="alert">
+            <a href="admin/admin/dashboard" class="logo">
+                <span class="logo-mini">S S</span>
+                <h4><span class="logo-lg">GAUTENG PROVINCE</span></h4>
+            </a>
+            <nav class="navbar navbar-static-top" role="navigation">
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="col-md-5 col-sm-3 col-xs-5">
+                    <span href="#" class="sidebar-session">
+                        ANN LATSKY NURSING COLLEGE
+                    </span>
+                </div>
+                <div class="col-md-7 col-sm-9 col-xs-7">
+                    <div class="pull-right">
+                        <div class="navbar-custom-menu">
+                            <ul class="nav navbar-nav headertopmenu">
+                                <li class="cal15"><a href="admin/calendar/events" title="Calendar"><i class="fa fa fa-calendar"></i></a></li>
+                                <li>
+                                    <a href="#" title="Task" class="dropdown-toggle todoicon" data-toggle="dropdown">
+                                        <i class="fa fa-check-square-o"></i>
+                                        <ul class="dropdown-menu menuboxshadow">
+                                            <li class="todoview plr10 ssnoti">Today you have 0 pending task.<a href="admin/calendar/events" class="pull-right pt0">View All</a></li>
+                                            <li>
+                                                <ul class="todolist"></ul>
+                                            </li>
+                                        </ul>
+                                </li>
+                                <li class="dropdown user-menu">
+                                    <a class="dropdown-toggle" style="padding: 15px 13px;" data-toggle="dropdown" href="#" aria-expanded="false">
+                                        <img src="no_image.png" class="topuser-image" alt="User Image">
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user menuboxshadow">
+                                        <li>
+                                            <div class="sstopuser">
+                                                <div class="ssuserleft">
+                                                    <a href="admin/staff/profile/1"><img src="no_image.png" alt="User Image"></a>
+                                                </div>
+                                                <div class="sstopuser-test">
+                                                    <h4 style="text-transform: capitalize;">Super Admin</h4>
+                                                    <h5>Super Admin</h5>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="sspass">
+                                                    <a href="admin/staff/profile/1" data-toggle="tooltip" title="" data-original-title="My Profile"><i class="fa fa-user"></i>Profile</a>
+                                                    <a class="pl25" href="admin/admin/changepass" data-toggle="tooltip" title="" data-original-title="Change Password"><i class="fa fa-key"></i>Password</a> <a class="pull-right" href="login.html"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <aside class="main-sidebar" id="alert2">
+            <form class="navbar-form navbar-left search-form2" role="search" action="admin/admin/search" method="POST">
+                <input type="text" name="search_text" class="form-control search-form" placeholder="Search By Student Name, Roll Number, Enroll Number, National Id, Local Id Etc.">
+                <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" style="padding: 3px 12px !important;border-radius: 0px 30px 30px 0px; background: #fff;" class="btn btn-flat"><i class="fa fa-search"></i></button>
+                </span>
+            </form>
+            <section class="sidebar" id="sibe-box">
+                <ul class="sessionul fixedmenu">
+                    <li class="removehover">
+                        <a data-toggle="modal" data-target="#sessionModal">Current Session: 2019-20<i class="fa fa-pencil pull-right"></i></a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle drop5" data-toggle="dropdown" href="#" aria-expanded="false">Quick Links <span class="glyphicon glyphicon-th pull-right"></span></a>
+                        <ul class="dropdown-menu verticalmenu" style="min-width:194px;font-size:10pt;left:3px;">
+                            <li role="presentation"><a style="color:#282828; font-family: 'Roboto-Bold';padding:6px 20px;" role="menuitem" tabindex="-1" href="pages/studentdetails.html"><i class="fa fa-user-plus"></i>Student Details</a></li>
+                            <li role="presentation"><a style="color:#282828; font-family: 'Roboto-Bold';padding:6px 20px;" role="menuitem" tabindex="-1" href="pages/manageemp.html"><i class="fa fa-calendar-check-o"></i>Staff Directory</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="sidebar-menu verttop">
+                    <li class="treeview ">
+                        <a href="#"><i class="fa fa-user-plus"></i> <span>Student Information</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li class=""><a href="pages/studentdetails.html"><i class="fa fa-angle-double-right"></i> Student Details</a></li>
+                            <li class=""><a href="pages/studentadmission.html"><i class="fa fa-angle-double-right"></i> Student Admission</a></li>
+                            <li class=""><a href="pages/logincredentials.html"><i class="fa fa-angle-double-right"></i> Student Login Credential</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview ">
+                        <a href="#"><i class="fa fa-mortar-board"></i> <span>Manage College</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li class=""><a href="pages/department.html"><i class="fa fa-angle-double-right"></i> Department</a></li>
+                            <li class=""><a href="pages/section.html"><i class="fa fa-angle-double-right"></i> Section</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-sitemap"></i> <span>Employee</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li class=""><a href="pages/manageemp.html"><i class="fa fa-angle-double-right"></i> Manage Employee</a></li>
+                            <li class=""><a href="pages/empdepartment.html"><i class="fa fa-angle-double-right"></i> Department</a></li>
+                            <li class=""><a href="pages/empdesignation.html"><i class="fa fa-angle-double-right"></i> Designation</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-sitemap"></i> <span>Communicate</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li class=""><a href="pages/noticeboard.html"><i class="fa fa-angle-double-right"></i> Notice Board</a></li>
+                            <li class=""><a href="pages/sendmsg.html"><i class="fa fa-angle-double-right"></i> Send Message</a></li>
+                            <li class=""><a href="pages/sendemailsms.html"><i class="fa fa-angle-double-right"></i> Send Email / SMS</a></li>
+                            <li class=""><a href="pages/emailsmslog.html"><i class="fa fa-angle-double-right"></i> Email / SMS Log</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-download"></i> <span>Download & Upload</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li class=""><a href="pages/uploadcontent.html"><i class="fa fa-angle-double-right"></i> Upload Content</a></li>
+                            <li class=""><a href="pages/assignments.html"><i class="fa fa-angle-double-right"></i> Assignments</a></li>
+                            <li class=""><a href="pages/studymaterial.html"><i class="fa fa-angle-double-right"></i> Study Material</a></li>
+                            <li class=""><a href="pages/syllabus.html"><i class="fa fa-angle-double-right"></i> Syllabus</a></li>
+                            <li class=""><a href="pages/otherdownload.html"><i class="fa fa-angle-double-right"></i> Other Downloads</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-building-o"></i> <span>Manage Residence</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li class=""><a href="pages/hostelrooms.html"><i class="fa fa-angle-double-right"></i> Hostel Rooms</a></li>
+                            <li class=""><a href="pages/roomtype.html"><i class="fa fa-angle-double-right"></i> Room Type</a></li>
+                            <li class=""><a href="pages/hostel.html"><i class="fa fa-angle-double-right"></i> Hostel</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-newspaper-o"></i> <span>Student Card</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li class=""><a href="pages/studentcard.html"><i class="fa fa-angle-double-right"></i> Student ID Card</a></li>
+                            <li class=""><a href="pages/generatecard.html"><i class="fa fa-angle-double-right"></i> Generate ID Card</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-calendar-check-o"></i> <span>Attendance</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li class=""><a href="pages/studattendenceList.html"><i class="fa fa-angle-double-right"></i> Student Attendance</a></li>
+                            <li class=""><a href="pages/studattendenceReport.html"><i class="fa fa-angle-double-right"></i> Attendance by Date</a></li>
+                            <li class=""><a href="pages/studclassattendencereport.html"><i class="fa fa-angle-double-right"></i> Attendance Report</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-flask"></i> <span>Homework</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li class=""><a href="pages/homework.html"><i class="fa fa-angle-double-right"></i> Add Homework</a></li>
+                            <li class=""><a href="pages/evaluationreport.html"><i class="fa fa-angle-double-right"></i> Evaluation Report</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-money"></i> <span>Financial</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li class=""><a href="pages/collectfee.html"><i class="fa fa-angle-double-right"></i> Collect Fees</a></li>
+                            <li class=""><a href="pages/searchduefees.html"><i class="fa fa-angle-double-right"></i> Search Due Fees</a></li>
+                            <li class=""><a href="pages/feesstatement.html"><i class="fa fa-angle-double-right"></i> Fees Statement</a></li>
+                            <li class=""><a href="pages/balancefees.html"><i class="fa fa-angle-double-right"></i> Balance Fees Report</a></li>
+                            <li class=""><a href="pages/feemaster.html"><i class="fa fa-angle-double-right"></i> Fees Master</a></li>
+                            <li class=""><a href="pages/feegroup.html"><i class="fa fa-angle-double-right"></i> Fees Group</a></li>
+                            <li class=""><a href="pages/feetype.html"><i class="fa fa-angle-double-right"></i> Fees Type</a></li>
+                            <li class=""><a href="pages/feediscount.html"><i class="fa fa-angle-double-right"></i> Fees Discount</a></li>
+                            <li class=""><a href="pages/feesforward.html"><i class="fa fa-angle-double-right"></i> Fees Carry Forward</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-usd"></i> <span>Income</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li class=""><a href="pages/addincome.html"><i class="fa fa-angle-double-right"></i> Add Income</a></li>
+                            <li class=""><a href="pages/incomesearch.html"><i class="fa fa-angle-double-right"></i> Search Income</a></li>
+                            <li class=""><a href="pages/incomehead.html"><i class="fa fa-angle-double-right"></i> Income Head</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-credit-card"></i> <span>Expense</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li class=""><a href="pages/addexpense.html"><i class="fa fa-angle-double-right"></i> Add Expense</a></li>
+                            <li class=""><a href="pages/expensesearch.html"><i class="fa fa-angle-double-right"></i> Search Expense</a></li>
+                            <li class=""><a href="pages/expensehead.html"><i class="fa fa-angle-double-right"></i> Expense Head</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-book"></i> <span>Library</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li class=""><a href="pages/book.html"><i class="fa fa-angle-double-right"></i> Add Book</a></li>
+                            <li class=""><a href="pages/getall.html"><i class="fa fa-angle-double-right"></i> Book List</a></li>
+                            <li class=""><a href="pages/member.html"><i class="fa fa-angle-double-right"></i> Issue Return</a></li>
+                            <li class=""><a href="pages/mstudent.html"><i class="fa fa-angle-double-right"></i> Add Student</a></li>
+                            <li class=""><a href="pages/teacher.html"><i class="fa fa-angle-double-right"></i> Add Staff Member</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-map-o"></i> <span>Examination</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li class=""><a href="pages/exam.html"><i class="fa fa-angle-double-right"></i> Exam List</a></li>
+                            <li class=""><a href="pages/examschedule.html"><i class="fa fa-angle-double-right"></i> Exam Schedule</a></li>
+                            <li class=""><a href="pages/markregister.html"><i class="fa fa-angle-double-right"></i> Marks Register</a></li>
+                            <li class=""><a href="pages/grade.html"><i class="fa fa-angle-double-right"></i> Marks Grade</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-graduation-cap"></i> <span>Academics</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li class=""><a href="pages/timetable.html"><i class="fa fa-angle-double-right"></i> Timetable</a></li>
+                            <li class=""><a href="pages/assignclassteacher.html"><i class="fa fa-angle-double-right"></i> Assign Teacher</a></li>
+                            <li class=""><a href="pages/viewassignteacher.html"><i class="fa fa-angle-double-right"></i> Assign Subject</a></li>
+                            <li class=""><a href="pages/stdtransfer.html"><i class="fa fa-angle-double-right"></i> Promote Students</a></li>
+                            <li class=""><a href="pages/subject.html"><i class="fa fa-angle-double-right"></i> Subject</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+        <div class="content-wrapper" style="min-height: 946px;">
+            <section class="content">
+                <div class="row">
+                    <div class="col-md-12">
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
 
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="info-box bg-aqua">
+                                    <span class="info-box-icon"><i class="fa fa-users"></i></span>
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Users</span>
+                                        <span class="info-box-number">4</span>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: 70%"></div>
+                                        </div>
+                                        <span class="progress-description">
+                                            20% Staff Members
+                                        </span>
+                                    </div>
+                                    <!-- /.info-box-content -->
+                                </div>
+                                <!-- /.info-box -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="info-box bg-green">
+                                    <span class="info-box-icon"><i class="fa fa-upload"></i></span>
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Uploads</span>
+                                        <span class="info-box-number">10</span>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: 70%"></div>
+                                        </div>
+                                        <span class="progress-description">
+                                            50% Assignments
+                                        </span>
+                                    </div>
+                                    <!-- /.info-box-content -->
+                                </div>
+                                <!-- /.info-box -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="info-box bg-yellow">
+                                    <span class="info-box-icon"><i class="fa fa-calendar"></i></span>
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Events</span>
+                                        <span class="info-box-number">41,410</span>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: 70%"></div>
+                                        </div>
+                                        <span class="progress-description">
+                                            x
+                                        </span>
+                                    </div>
+                                    <!-- /.info-box-content -->
+                                </div>
+                                <!-- /.info-box -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="info-box bg-red">
+                                    <span class="info-box-icon"><i class="fa fa-graduation-cap"></i></span>
+                                    <div class="info-box-content">
+                                        <span class="info-box-text">Students</span>
+                                        <span class="info-box-number">3</span>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: 70%"></div>
+                                        </div>
+                                        <span class="progress-description">
+                                            55% Re-admission
+                                        </span>
+                                    </div>
+                                    <!-- /.info-box-content -->
+                                </div>
+                                <!-- /.info-box -->
+                            </div>
+                            <div class="col-md-12 col-sm-12">
+
+                                <div class="box box-primary">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Student Growth</h3>
+                                        <div class="box-tools pull-right">
+                                            <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                                <i class="fa fa-minus"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="box-body chart-responsive">
+                                        <div class="chart" id="revenue-chart" style="height: 300px;"></div>
+                                    </div>
+                                    <!-- /.box-body -->
+                                </div>
+                            </div><div class="col-md-4">
+                                <div class="box box-danger">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Student Overview</h3>
+                                        <div class="box-tools pull-right">
+                                            <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                                <i class="fa fa-minus"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="box-body chart-responsive">
+                                        <div class="chart" id="sales-chart" style="height: 300px; position: relative;"></div>
+                                    </div>
+                                    <!-- /.box-body -->
+                                </div>
+                            </div><div class="col-md-6" style="display: none;">
+                                <!-- AREA CHART -->
+                                <div class="box box-primary">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Area Chart</h3>
+                                        <div class="box-tools pull-right">
+                                            <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                                <i class="fa fa-minus"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="box-body">
+                                        <div class="chart">
+                                            <canvas id="areaChart" style="height:250px"></canvas>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-body -->
+                                </div>
+                                <!-- /.box -->
+                                <!-- DONUT CHART -->
+                                <div class="box box-danger">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Donut Chart</h3>
+                                        <div class="box-tools pull-right">
+                                            <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                                <i class="fa fa-minus"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="box-body">
+                                        <canvas id="pieChart" style="height:250px"></canvas>
+                                    </div>
+                                    <!-- /.box-body -->
+                                </div>
+                                <!-- /.box -->
+                            </div>
+                            <!-- /.col (LEFT) -->
+                            <div class="col-md-8">
+                                <div class="box box-primary">
+                                    <div class="box-body">
+                                        <!-- THE CALENDAR -->
+                                        <div id="calendar"></div>
+                                    </div>
+                                    <!-- /.box-body -->
+                                </div>
+                                <!-- /. box -->
+
+                            </div><div class="col-md-12">
+                                <div class="box">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">Recent Student List</h3>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Gender</th>
+                                                    <th>Qualification</th>
+                                                    <th>Date of Birth</th>
+                                                    <th>Mobile No</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cedrick Nkhumise</td>
+                                                    <td>Male</td>
+                                                    <td>Bachelor’s Degree in Nursing and Midwifery(1st Year - 1st Semester)</td>
+                                                    <td>01/01/2009</td>
+                                                    <td>27817992010</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Gugulethu Nzimande</td>
+                                                    <td>Female</td>
+                                                    <td>Bachelor’s Degree in Nursing and Midwifery(1st Year - 1st Semester)</td>
+                                                    <td>02/02/1990</td>
+                                                    <td>27843938590</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ami Raval</td>
+                                                    <td>Female</td>
+                                                    <td>Bachelor’s Degree in Nursing and Midwifery(1st Year - 1st Semester)</td>
+                                                    <td>12/03/2019</td>
+                                                    <td>27843938590</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cedrick Nkhumise</td>
+                                                    <td>Male</td>
+                                                    <td>Bachelor’s Degree in Nursing and Midwifery(1st Year - 1st Semester)</td>
+                                                    <td>01/01/2009</td>
+                                                    <td>27817992010</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Gugulethu Nzimande</td>
+                                                    <td>Female</td>
+                                                    <td>Bachelor’s Degree in Nursing and Midwifery(1st Year - 1st Semester)</td>
+                                                    <td>02/02/1990</td>
+                                                    <td>27843938590</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ami Raval</td>
+                                                    <td>Female</td>
+                                                    <td>Bachelor’s Degree in Nursing and Midwifery(1st Year - 1st Semester)</td>
+                                                    <td>12/03/2019</td>
+                                                    <td>27843938590</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- /.box-body -->
+                                </div>
+                                <!-- /.box -->
+                                <!-- /.box -->
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+
+
+                                   <div class="col-md-3">
+
+
+                                           <div class="info-box">
+                                               <a href="#">
+                                                   <span class="info-box-icon bg-yellow"><i class="fa fa-user-secret"></i></span>
+                                                   <div class="info-box-content">
+                                                       <span class="info-box-text">Teacher</span>
+                                                       <span class="info-box-number">0</span>
+                                                   </div>
+                                               </a>
+                                           </div>
+
+
+                                           <div class="info-box">
+                                               <a href="#">
+                                                   <span class="info-box-icon bg-yellow"><i class="fa fa-user-secret"></i></span>
+                                                   <div class="info-box-content">
+                                                       <span class="info-box-text">Accountant</span>
+                                                       <span class="info-box-number">0</span>
+                                                   </div>
+                                               </a>
+                                           </div>
+
+
+                                           <div class="info-box">
+                                               <a href="#">
+                                                   <span class="info-box-icon bg-yellow"><i class="fa fa-user-secret"></i></span>
+                                                   <div class="info-box-content">
+                                                       <span class="info-box-text">Librarian</span>
+                                                       <span class="info-box-number">0</span>
+                                                   </div>
+                                               </a>
+                                           </div>
+
+
+                                           <div class="info-box">
+                                               <a href="#">
+                                                   <span class="info-box-icon bg-yellow"><i class="fa fa-user-secret"></i></span>
+                                                   <div class="info-box-content">
+                                                       <span class="info-box-text">Receptionist</span>
+                                                       <span class="info-box-number">0</span>
+                                                   </div>
+                                               </a>
+                                           </div>
+
+
+                                           <div class="info-box">
+                                               <a href="#">
+                                                   <span class="info-box-icon bg-yellow"><i class="fa fa-user-secret"></i></span>
+                                                   <div class="info-box-content">
+                                                       <span class="info-box-text">Super Admin</span>
+                                                       <span class="info-box-number">1</span>
+                                                   </div>
+                                               </a>
+                                           </div>
+
+                                                   </div>
+                    -->
+                </div>
+
+        </div>
+        <div id="newEventModal" class="modal fade " role="dialog">
+            <div class="modal-dialog modal-dialog2 modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Add New Event</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <form role="form" id="addevent_form" method="post" enctype="multipart/form-data" action="">
+                                <div class="form-group col-md-12">
+                                    <label for="exampleInputEmail1">Event Title</label>
+                                    <input class="form-control" name="title" id="input-field">
+                                    <span class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="exampleInputEmail1">Description</label>
+                                    <textarea name="description" class="form-control" id="desc-field"></textarea>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="exampleInputEmail1">Event Date</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" autocomplete="off" name="event_dates" class="form-control pull-right" id="date-field">
+                                    </div>
+                                    <!-- <input class="form-control" type="text" autocomplete="off"  name="event_dates" id="date-field"> -->
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="exampleInputEmail1">Event Color</label>
+                                    <input type="hidden" name="eventcolor" autocomplete="off" id="eventcolor" class="form-control">
+                                </div>
+                                <div class="form-group col-md-12">
+
+                                    <div class="cpicker-wrapper"><div class='calendar-cpicker cpicker cpicker-big' data-color='#03a9f4' style='background:#03a9f4;border:1px solid #03a9f4; border-radius:100px'></div><div class='calendar-cpicker cpicker cpicker-small' data-color='#c53da9' style='background:#c53da9;border:1px solid #c53da9; border-radius:100px'></div><div class='calendar-cpicker cpicker cpicker-small' data-color='#757575' style='background:#757575;border:1px solid #757575; border-radius:100px'></div><div class='calendar-cpicker cpicker cpicker-small' data-color='#8e24aa' style='background:#8e24aa;border:1px solid #8e24aa; border-radius:100px'></div><div class='calendar-cpicker cpicker cpicker-small' data-color='#d81b60' style='background:#d81b60;border:1px solid #d81b60; border-radius:100px'></div><div class='calendar-cpicker cpicker cpicker-small' data-color='#7cb342' style='background:#7cb342;border:1px solid #7cb342; border-radius:100px'></div><div class='calendar-cpicker cpicker cpicker-small' data-color='#fb8c00' style='background:#fb8c00;border:1px solid #fb8c00; border-radius:100px'></div><div class='calendar-cpicker cpicker cpicker-small' data-color='#fb3b3b' style='background:#fb3b3b;border:1px solid #fb3b3b; border-radius:100px'></div></div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="exampleInputEmail1">Event Type</label>
+                                    <br />
+                                    <label class="radio-inline">
+                                        <input type="radio" name="event_type" value="public" id="public">Public
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="event_type" value="private" checked id="private">Private
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="event_type" value="sameforall" id="public">All Super Admin
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="event_type" value="protected" id="public">Protected
+                                    </label>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <input type="submit" class="btn btn-primary submit_addevent pull-right" value="Save">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="viewEventModal" class="modal fade " role="dialog">
+            <div class="modal-dialog modal-dialog2 modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">View Event</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <form role="form" method="post" id="updateevent_form" enctype="multipart/form-data" action="">
+                                <div class="form-group col-md-12">
+                                    <label for="exampleInputEmail1">EventTitle</label>
+                                    <input class="form-control" name="title" placeholder="Event Title" id="event_title">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="exampleInputEmail1">Description</label>
+                                    <textarea name="description" class="form-control" placeholder="Event Description" id="event_desc"></textarea>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="exampleInputEmail1">EventDate</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" autocomplete="off" name="eventdates" class="form-control pull-right" id="eventdates">
+                                    </div>
+                                    <!-- <input class="form-control" type="text" autocomplete="off" name="eventdates" placeholder="Event Dates" id="eventdates"> -->
+                                </div>
+                                <input type="hidden" name="eventid" id="eventid">
+                                <div class="form-group col-md-12">
+                                    <label for="exampleInputEmail1">EventColor</label>
+                                    <input type="hidden" name="eventcolor" autocomplete="off" placeholder="Event Color" id="event_color" class="form-control">
+                                </div>
+                                <div class="form-group col-md-12">
+
+                                    <div class="cpicker-wrapper selectevent"><div id=03a9f4 class='calendar-cpicker cpicker cpicker-big' data-color='#03a9f4' style='background:#03a9f4;border:1px solid #03a9f4; border-radius:100px'></div><div id=c53da9 class='calendar-cpicker cpicker cpicker-small' data-color='#c53da9' style='background:#c53da9;border:1px solid #c53da9; border-radius:100px'></div><div id=757575 class='calendar-cpicker cpicker cpicker-small' data-color='#757575' style='background:#757575;border:1px solid #757575; border-radius:100px'></div><div id=8e24aa class='calendar-cpicker cpicker cpicker-small' data-color='#8e24aa' style='background:#8e24aa;border:1px solid #8e24aa; border-radius:100px'></div><div id=d81b60 class='calendar-cpicker cpicker cpicker-small' data-color='#d81b60' style='background:#d81b60;border:1px solid #d81b60; border-radius:100px'></div><div id=7cb342 class='calendar-cpicker cpicker cpicker-small' data-color='#7cb342' style='background:#7cb342;border:1px solid #7cb342; border-radius:100px'></div><div id=fb8c00 class='calendar-cpicker cpicker cpicker-small' data-color='#fb8c00' style='background:#fb8c00;border:1px solid #fb8c00; border-radius:100px'></div><div id=fb3b3b class='calendar-cpicker cpicker cpicker-small' data-color='#fb3b3b' style='background:#fb3b3b;border:1px solid #fb3b3b; border-radius:100px'></div></div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="exampleInputEmail1">EventType</label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="eventtype" value="public" id="public">Public
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="eventtype" value="private" id="private">Private
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="eventtype" value="sameforall" id="public">All Super Admin
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="eventtype" value="protected" id="public">Protected
+                                    </label>
+                                </div>
+                                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+                                    <input type="submit" class="btn btn-primary submit_update pull-right" value="Save">
+                                </div>
+                                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                                    <input type="button" id="delete_event" class="btn btn-primary submit_delete pull-right" value="Delete">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ChartJS -->
+        <script src="Content/backend/dist/js/moment.min.js"></script>
+        <footer class="main-footer">
+            &copy;  2019
+            ANN LATSKY NURSING COLLEGE 4.2.0
+        </footer>
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <script>
+    $.widget.bridge('uibutton', $.ui.button);
+    </script>
+    <link href="Content/backend/toast-alert/toastr.css" rel="stylesheet" />
+    <script src="Content/backend/toast-alert/toastr.js"></script>
+    <script src="Content/backend/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="Content/backend/plugins/select2/select2.min.css">
+    <script src="Content/backend/plugins/select2/select2.full.min.js"></script>
+    <script src="Content/backend/plugins/input-mask/jquery.inputmask.js"></script>
+    <script src="Content/backend/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+    <script src="Content/backend/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+    <script src="Content/backend/dist/js/moment.min.js"></script>
+    <script src="Content/backend/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="Content/backend/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+    <script src="Content/backend/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="Content/backend/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="Content/backend/dist/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $(".studentsidebar").mCustomScrollbar({
+            theme: "minimal"
+        });
+
+        $('.studentsideclose, .overlay').on('click', function () {
+            $('.studentsidebar').removeClass('active');
+            $('.overlay').fadeOut();
+        });
+
+        $('#sidebarCollapse').on('click', function () {
+            $('.studentsidebar').addClass('active');
+            $('.overlay').fadeIn();
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+    </script>
+
+    <script src="Content/backend/plugins/iCheck/icheck.min.js"></script>
+    <script src="Content/backend/plugins/datepicker/bootstrap-datepicker.js"></script>
+    <script src="Content/backend/plugins/chartjs/Chart.min.js"></script>
+    <script src="Content/backend/plugins/fastclick/fastclick.min.js"></script>
+    <!-- <script type="text/javascript" src="Content/backend/dist/js/bootstrap-filestyle.min.js"></script> -->
+    <script src="Content/backend/dist/js/app.min.js"></script>
+    <!--nprogress-->
+    <script src="Content/backend/dist/js/nprogress.js"></script>
+    <!--file dropify-->
+    <script src="Content/backend/dist/js/dropify.min.js"></script>
+
+    <script type="text/javascript" src="Content/backend/dist/datatables/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="Content/backend/dist/datatables/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="Content/backend/dist/datatables/js/jszip.min.js"></script>
+    <script type="text/javascript" src="Content/backend/dist/datatables/js/pdfmake.min.js"></script>
+    <script type="text/javascript" src="Content/backend/dist/datatables/js/vfs_fonts.js"></script>
+    <script type="text/javascript" src="Content/backend/dist/datatables/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="Content/backend/dist/datatables/js/buttons.print.min.js"></script>
+    <script type="text/javascript" src="Content/backend/dist/datatables/js/buttons.colVis.min.js"></script>
+    <script type="text/javascript" src="Content/backend/dist/datatables/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript" src="Content/backend/dist/datatables/js/ss.custom.js"></script>
+</body>
+</html>
+<!-- jQuery 3 -->
+<!--script src="Content/backend/dist/js/pages/dashboard2.js"></script-->
+<script src="Content/backend/fullcalendar/dist/fullcalendar.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+    });
+
+
+    function complete_event(id, status) {
+
+        $.ajax({
+            url: "admin/calendar/markcomplete/" + id,
+            type: "POST",
+            data: {id: id, active: status},
+            dataType: 'json',
+
+            success: function (res)
+            {
+
+                if (res.status == "fail") {
+
+                    var message = "";
+                    $.each(res.error, function (index, value) {
+
+                        message += value;
+                    });
+                    errorMsg(message);
+
+                } else {
+
+                    successMsg(res.message);
+
+                    window.location.reload(true);
+                }
+
+            }
+
+        });
+    }
+
+    function markc(id) {
+
+        $('#newcheck' + id).change(function () {
+
+            if (this.checked) {
+
+                complete_event(id, 'yes');
+            } else {
+
+                complete_event(id, 'no');
+            }
+
+        });
+    }
+
+</script>
+
+<!-- Button trigger modal -->
+<!-- Modal -->
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <div class="modal fade" id="sessionModal" tabindex="-1" role="dialog" aria-labelledby="sessionModalLabel">
+        <form action="admin/admin/activeSession" id="form_modal_session" class="form-horizontal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="sessionModalLabel">Session</h4>
+                    </div>
+                    <div class="modal-body sessionmodal_body pb0">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary submit_session" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Please wait..">Save</button>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
+
+<div id="activelicmodal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Register your purchase code</h4>
+            </div>
+            <form action="admin/admin/updatePurchaseCode" method="POST" id="purchase_code">
+                <div class="modal-body lic_modal-body">
+                    <div class="error_message">
+
+                    </div>
+                    <div class="form-group">
+                        <label class="ainline"><span>Envato Market Purchase Code for Smart School ( <a target="_blank" href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code-"> How to find it?</a> )</span></label>
+                        <input type="text" class="form-control" id="input-envato_market_purchase_code" name="envato_market_purchase_code">
+                        <div id="error" class="text text-danger"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Your Email registered with Envato</label>
+                        <input type="text" class="form-control" id="input-email" name="email">
+                        <div id="error" class="text text-danger"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Saving...">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    function savedata(eventData) {
+        var base_url = '';
+        $.ajax({
+            url: base_url + 'admin/calendar/saveevent',
+            type: 'POST',
+            data: eventData,
+            dataType: "json",
+            success: function (msg) {
+                alert(msg);
+
+            }
+        });
+    }
+
+    $calendar = $('#calendar');
+    var base_url = '';
+    today = new Date();
+    y = today.getFullYear();
+    m = today.getMonth();
+    d = today.getDate();
+    var viewtitle = 'month';
+    var pagetitle = "Dashboard";
+
+    if (pagetitle == "Dashboard") {
+
+        viewtitle = 'agendaWeek';
+    }
+
+    $calendar.fullCalendar({
+        viewRender: function (view, element) {
+            // We make sure that we activate the perfect scrollbar when the view isn't on Month
+            //if (view.name != 'month'){
+            //  $(element).find('.fc-scroller').perfectScrollbar();
+            //}
+        },
+
+        header: {
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay',
+            left: 'prev,next,today'
+        },
+        defaultDate: today,
+        defaultView: viewtitle,
+        selectable: true,
+        selectHelper: true,
+        views: {
+            month: {// name of view
+                titleFormat: 'MMMM YYYY'
+                        // other view-specific options here
+            },
+            week: {
+                titleFormat: " MMMM D YYYY"
+            },
+            day: {
+                titleFormat: 'D MMM, YYYY'
+            }
+        },
+        timezone: "Asia/Kolkata",
+        draggable: false,
+
+        editable: false,
+        eventLimit: false, // allow "more" link when too many events
+
+
+        // color classes: [ event-blue | event-azure | event-green | event-orange | event-red ]
+        events: {
+            url: base_url + 'admin/calendar/getevents'
+
+        },
+
+        eventRender: function (event, element) {
+            element.attr('title', event.title);
+            element.attr('onclick', event.onclick);
+            element.attr('data-toggle', 'tooltip');
+            if ((!event.url) && (event.event_type != 'task')) {
+                element.attr('title', event.title + '-' + event.description);
+                element.click(function () {
+                    view_event(event.id);
+                });
+            }
+        },
+        dayClick: function (date, jsEvent, view) {
+            var d = date.format();
+            if (!$.fullCalendar.moment(d).hasTime()) {
+                d += ' 05:30';
+            }
+            //var vformat = (app_time_format == 24 ? app_date_format + ' H:i' : app_date_format + ' g:i A');
+
+
+                $("#input-field").val('');
+                $("#desc-field").text('');
+                $("#date-field").daterangepicker({
+                    startDate: date,
+                    endDate: date,
+                    timePicker: true, timePickerIncrement: 5, locale: {
+                        format: 'MM/DD/YYYY hh:mm a'
+                    }
+                });
+                $('#newEventModal').modal('show');
+
+            return false;
+        }
+
+    });
+
+    $(document).ready(function () {
+        $("#date-field").daterangepicker({timePicker: true, timePickerIncrement: 5, locale: {
+                format: 'MM/DD/YYYY hh:mm A'
+            }});
+
+
+    });
+
+    function datepic() {
+        $("#date-field").daterangepicker();
+    }
+    function view_event(id) {
+        //$("#28B8DA").removeClass('cpicker-small').addClass('cpicker-big');
+        $('.selectevent').find('.cpicker-big').removeClass('cpicker-big').addClass('cpicker-small');
+        var base_url = '';
+        if (typeof (id) == 'undefined') {
+            return;
+        }
+        $.ajax({
+            url: base_url + 'admin/calendar/view_event/' + id,
+            type: 'POST',
+            //data: '',
+            dataType: "json",
+            success: function (msg) {
+
+
+                $("#event_title").val(msg.event_title);
+                $("#event_desc").text(msg.event_description);
+                $('#eventdates').val(msg.start_date + '-' + msg.end_date);
+                $('#eventid').val(id);
+                if (msg.event_type == 'public') {
+
+                    $('input:radio[name=eventtype]')[0].checked = true;
+
+                } else if (msg.event_type == 'private') {
+                    $('input:radio[name=eventtype]')[1].checked = true;
+
+                } else if (msg.event_type == 'sameforall') {
+                    $('input:radio[name=eventtype]')[2].checked = true;
+
+                } else if (msg.event_type == 'protected') {
+                    $('input:radio[name=eventtype]')[3].checked = true;
+
+                }
+                // $("#red#28B8DA").removeClass('cpicker-big').addClass('cpicker-small');
+
+                //$(this).removeClass('cpicker-small', 'fast').addClass('cpicker-big', 'fast');
+                $("#eventdates").daterangepicker({
+                    startDate: msg.startdate,
+                    endDate: msg.enddate,
+                    timePicker: true, timePickerIncrement: 5, locale: {
+                        format: 'MM/DD/YYYY hh:mm A'
+                    }
+                });
+                $("#event_color").val(msg.event_color);
+                $("#delete_event").attr("onclick", "deleteevent(" + id + ",'Event')")
+
+                // $("#28B8DA").removeClass('cpicker-big').addClass('cpicker-small');
+                $("#" + msg.colorid).removeClass('cpicker-small').addClass('cpicker-big');
+                $('#viewEventModal').modal('show');
+            }
+        });
+
+
+    }
+
+    $(document).ready(function (e) {
+        $("#addevent_form").on('submit', (function (e) {
+
+            e.preventDefault();
+            $.ajax({
+                url: "admin/calendar/saveevent",
+                type: "POST",
+                data: new FormData(this),
+                dataType: 'json',
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function (res)
+                {
+
+                    if (res.status == "fail") {
+
+                        var message = "";
+                        $.each(res.error, function (index, value) {
+
+                            message += value;
+                        });
+                        errorMsg(message);
+
+                    } else {
+
+                        successMsg(res.message);
+
+                        window.location.reload(true);
+                    }
+                }
+            });
+        }));
+
+
+    });
+
+
+    $(document).ready(function (e) {
+        $("#updateevent_form").on('submit', (function (e) {
+
+            e.preventDefault();
+            $.ajax({
+                url: "admin/calendar/updateevent",
+                type: "POST",
+                data: new FormData(this),
+                dataType: 'json',
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function (res)
+                {
+
+                    if (res.status == "fail") {
+
+                        var message = "";
+                        $.each(res.error, function (index, value) {
+
+                            message += value;
+                        });
+                        errorMsg(message);
+
+                    } else {
+
+                        successMsg(res.message);
+
+                        window.location.reload(true);
+                    }
+                }
+            });
+        }));
+
+
+    });
+
+    function deleteevent(id, msg) {
+        if (typeof (id) == 'undefined') {
+            return;
+        }
+        if (confirm("Are you sure to delete this " + msg + " !")) {
+            $.ajax({
+                url: base_url + 'admin/calendar/delete_event/' + id,
+                type: 'POST',
+                //data: '',
+                dataType: "json",
+                success: function (res) {
+                    if (res.status == "fail") {
+
+
+
+                        errorMsg(res.message);
+
+                    } else {
+
+                        successMsg(msg + " Deleted Succssfully.");
+
+                        window.location.reload(true);
+                    }
+                }
+
+            })
+        }
+
+    }
+
+
+    $("body").on('click', '.cpicker', function () {
+        var color = $(this).data('color');
+        // Clicked on the same selected color
+        if ($(this).hasClass('cpicker-big')) {
+            return false;
+        }
+
+        $(this).parents('.cpicker-wrapper').find('.cpicker-big').removeClass('cpicker-big').addClass('cpicker-small');
+        $(this).removeClass('cpicker-small', 'fast').addClass('cpicker-big', 'fast');
+        if ($(this).hasClass('kanban-cpicker')) {
+            $(this).parents('.panel-heading-bg').css('background', color);
+            $(this).parents('.panel-heading-bg').css('border', '1px solid ' + color);
+        } else if ($(this).hasClass('calendar-cpicker')) {
+            $("body").find('input[name="eventcolor"]').val(color);
+        }
+    });
+</script>

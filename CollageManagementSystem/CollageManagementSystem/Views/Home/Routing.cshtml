@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Routing";
+}
+@{
+    Layout = "~/Views/Shared/_LayoutNew.cshtml";
+}
+<h2>AngularJS Routing</h2>
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    li {
+        float: left;
+        border-right: 1px solid #bbb;
+    }
+
+        li:last-child {
+            border-right: none;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+            li a:hover:not(.active) {
+                background-color: #111;
+            }
+
+    .active {
+        background-color: #4CAF50;
+    }
+</style>
+<div>
+    <ul>
+        <li><a class="active" href="#!/home">Profile</a></li>
+        <li><a href="#!/Article">Article</a></li>
+        <li><a href="#!/Blog/098Xfs1234">Blog</a></li>
+        <li><a href="#!/Page-Not-Found">Error</a></li>
+        <li><a href="#!/Register">Register student</a></li>
+        <li><a href="#!/Page-Not-Found">Error</a></li>
+    </ul>
+</div>
+<div style="padding:14px 16px; margin:10px; border:10px solid Blue; clear:both;">
+    <ng-view></ng-view>
+</div>
+
+
+
