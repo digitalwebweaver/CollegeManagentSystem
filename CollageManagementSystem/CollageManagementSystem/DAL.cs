@@ -12,16 +12,15 @@ namespace CollageManagementSystem
     public class DAL
     {
 
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Con"].ConnectionString);
 
-
-        public int userlogin(Login us)
+        public int userlogin(LoginViewModel us)
         {
 
             SqlCommand com = new SqlCommand("Sp_User_login", con);
             com.CommandType = CommandType.StoredProcedure;
-            com.Parameters.AddWithValue("@Email", us.email);
-            com.Parameters.AddWithValue("@Password", us.password);
+            com.Parameters.AddWithValue("@Email", us.Email);
+            com.Parameters.AddWithValue("@Password", us.Password);
             SqlParameter oblogin = new SqlParameter();
             oblogin.ParameterName = "@Isvalid";
             oblogin.Direction = ParameterDirection.Output;
@@ -36,9 +35,5 @@ namespace CollageManagementSystem
         }
 
     }
-
-
-
-
 
 }

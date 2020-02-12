@@ -214,6 +214,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\AccountController.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -601,6 +602,13 @@
     <Content Include="Login\backend\bower_components\select2\tests\vendor\qunit-1.23.1.css" />
     <Content Include="Login\backend\bower_components\select2\tests\vendor\qunit-1.23.1.js" />
     <Content Include="Login\backend\bower_components\select2\vendor\jquery-2.1.0.js" />
+    <Content Include="Login\backend\css\AdminLTE.min.css" />
+    <Content Include="Login\backend\css\blue.css" />
+    <Content Include="Login\backend\css\blue.png" />
+    <Content Include="Login\backend\css\bootstrap.min.css" />
+    <Content Include="Login\backend\css\font-awesome.min.css" />
+    <Content Include="Login\backend\css\ionicons.min.css" />
+    <Content Include="Login\backend\css\select2.min.css" />
     <Content Include="Login\backend\font-awesome\css\font-awesome.css" />
     <Content Include="Login\backend\font-awesome\css\font-awesome.min.css" />
     <Content Include="Login\backend\font-awesome\HELP-US-OUT.txt" />
@@ -721,6 +729,10 @@
     <Content Include="Login\backend\jquery\src\var\support.js" />
     <Content Include="Login\backend\jquery\src\var\toString.js" />
     <Content Include="Login\backend\jquery\src\wrap.js" />
+    <Content Include="Login\backend\js\bootstrap.min.js" />
+    <Content Include="Login\backend\js\icheck.min.js" />
+    <Content Include="Login\backend\js\jquery.js" />
+    <Content Include="Login\backend\js\jquery.min.js" />
     <Content Include="Login\backend\select2\dist\css\select2.css" />
     <Content Include="Login\backend\select2\dist\css\select2.min.css" />
     <Content Include="Login\backend\select2\dist\js\i18n\af.js" />
@@ -1433,6 +1445,10 @@
     <Content Include="Login\backend\select2\src\scss\_dropdown.scss" />
     <Content Include="Login\backend\select2\src\scss\_multiple.scss" />
     <Content Include="Login\backend\select2\src\scss\_single.scss" />
+    <Content Include="Login\backend\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Login\backend\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Login\backend\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Login\backend\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -1486,7 +1502,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="assets\" />
     <Folder Include="Content\backend\" />
-    <Folder Include="Views\Index\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

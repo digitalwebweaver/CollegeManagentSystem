@@ -12,9 +12,12 @@ using CollageManagementSystem.Models;
 
 namespace CollageManagementSystem.Controllers
 {
+
     [Authorize]
     public class AccountController : Controller
     {
+        DAL objDal = new DAL();
+
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -52,44 +55,66 @@ namespace CollageManagementSystem.Controllers
             }
         }
 
-        //
-        // GET: /Account/Login
-        [AllowAnonymous]
-        public ActionResult Login(string returnUrl)
+        public JsonResult userlogin(LoginViewModel us)
         {
-            ViewBag.ReturnUrl = returnUrl;
-            return View();
+            string result = Convert.ToString(objDal.userlogin(us));
+            if (result == "1")
+            {
+                Session["user"] = us.Email;
+             }
+            else
+            {
+                result = "Email or Password is wrong";
+            }
+            return Json(result, JsonRequestBehavior.AllowGet);
         }
 
-        //
-        // POST: /Account/Login
-        [HttpPost]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
 
-            // This doesn't count login failures towards account lockout
-            // To enable password failures to trigger account lockout, change to shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
-            switch (result)
-            {
-                case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
-                case SignInStatus.LockedOut:
-                    return View("Lockout");
-                case SignInStatus.RequiresVerification:
-                    return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
-                case SignInStatus.Failure:
-                default:
-                    ModelState.AddModelError("", "Invalid login attempt.");
-                    return View(model);
-            }
-        }
+
+
+        ////
+        //// GET: /Account/Login
+        //[AllowAnonymous]
+        //public ActionResult Login(string returnUrl)
+        //{
+        //    ViewBag.ReturnUrl = returnUrl;
+        //    return View();
+        //}
+
+        ////
+        //// POST: /Account/Login
+        //[HttpPost]
+        //[AllowAnonymous]
+        //[ValidateAntiForgeryToken]
+        //public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return View(model);
+        //    }
+
+        //    // This doesn't count login failures towards account lockout
+        //    // To enable password failures to trigger account lockout, change to shouldLockout: true
+        //    //var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+
+        //    var result = objDal.userlogin(model);
+        //    return View(model);
+
+
+        //    // switch (result)
+        //    //{
+        //    //    case SignInStatus.Success:
+        //    //        return RedirectToLocal(returnUrl);
+        //    //    case SignInStatus.LockedOut:
+        //    //        return View("Lockout");
+        //    //    case SignInStatus.RequiresVerification:
+        //    //        return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
+        //    //    case SignInStatus.Failure:
+        //    //    default:
+        //    //        ModelState.AddModelError("", "Invalid login attempt.");
+        //    //        return View(model);
+        //    //}
+        //}
 
         //
         // GET: /Account/VerifyCode
